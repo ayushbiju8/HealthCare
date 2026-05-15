@@ -1,0 +1,577 @@
+{
+  "clientName": "Thunder Client",
+  "collectionName": "HealthCare API Complete",
+  "dateExported": "2026-05-15T00:00:00.000Z",
+  "version": "1.2",
+  "coreVersion": "2.2.0",
+  "_id": "c59d9be2-9317-4467-9896-af1907ccbc37",
+  "folders": [
+    {
+      "_id": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "name": "Auth & Users",
+      "containerId": "",
+      "created": "2026-05-15T00:00:00.000Z",
+      "sortNum": 10000
+    },
+    {
+      "_id": "8a72e5f1-f662-4b2c-ae19-c7d293a4de4e",
+      "name": "Medical Records",
+      "containerId": "",
+      "created": "2026-05-15T00:00:00.000Z",
+      "sortNum": 20000
+    },
+    {
+      "_id": "5db695a8-cf4c-45d5-895e-a43934324c81",
+      "name": "Health Metrics",
+      "containerId": "",
+      "created": "2026-05-15T00:00:00.000Z",
+      "sortNum": 30000
+    },
+    {
+      "_id": "be1db121-ba6d-4a17-88b4-732064dddec1",
+      "name": "Fitness Data",
+      "containerId": "",
+      "created": "2026-05-15T00:00:00.000Z",
+      "sortNum": 40000
+    },
+    {
+      "_id": "52325073-3381-4ae5-a5bf-d1bbb00f2267",
+      "name": "Reminders",
+      "containerId": "",
+      "created": "2026-05-15T00:00:00.000Z",
+      "sortNum": 50000
+    },
+    {
+      "_id": "d5cc66bb-df8e-47b3-8008-e01daa9a65cf",
+      "name": "AI System Logs",
+      "containerId": "",
+      "created": "2026-05-15T00:00:00.000Z",
+      "sortNum": 60000
+    },
+    {
+      "_id": "56c4f100-f8a1-40ce-bac5-75e86d0934ca",
+      "name": "Hospital Integrations",
+      "containerId": "",
+      "created": "2026-05-15T00:00:00.000Z",
+      "sortNum": 70000
+    }
+  ],
+  "requests": [
+    {
+      "_id": "6df01ce3-46ac-49b6-bd96-7458f058f151",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "name": "Register User",
+      "url": "http://127.0.0.1:8000/api/auth/register/",
+      "method": "POST",
+      "sortNum": 10000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"email\": \"newuser@example.com\",\n  \"password\": \"password123\",\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\"\n}"
+      }
+    },
+    {
+      "_id": "f395da38-6354-4e3c-8892-73fb35469884",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "name": "Login (Get JWT)",
+      "url": "http://127.0.0.1:8000/api/auth/login/",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"email\": \"testuser@example.com\",\n  \"password\": \"testpass123\"\n}"
+      }
+    },
+    {
+      "_id": "13a956d8-6b2d-421e-9a5c-6d2c0ea25bdb",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "name": "Refresh Token",
+      "url": "http://127.0.0.1:8000/api/auth/refresh/",
+      "method": "POST",
+      "sortNum": 30000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"refresh\": \"<paste-refresh-token-here>\"\n}"
+      }
+    },
+    {
+      "_id": "77bc2e11-5931-48d0-869d-c6ecb440ca4c",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "name": "Get User Profile",
+      "url": "http://127.0.0.1:8000/api/auth/profile/",
+      "method": "GET",
+      "sortNum": 40000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "837cf24e-cdc3-4905-8bf1-9b281db50012",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "name": "Update User Profile",
+      "url": "http://127.0.0.1:8000/api/auth/profile/1/",
+      "method": "PATCH",
+      "sortNum": 50000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"first_name\": \"Updated\"\n}"
+      }
+    },
+    {
+      "_id": "a6d1eaa6-835e-42bc-8b46-3588b8da04aa",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "name": "Get Health Profile",
+      "url": "http://127.0.0.1:8000/api/auth/health-profile/",
+      "method": "GET",
+      "sortNum": 60000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "ba1ede4b-c8ee-4520-9098-72ee3d1b17f0",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "name": "Update Health Profile",
+      "url": "http://127.0.0.1:8000/api/auth/health-profile/1/",
+      "method": "PATCH",
+      "sortNum": 70000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"blood_group\": \"A+\"\n}"
+      }
+    },
+    {
+      "_id": "42ae740d-52e3-42fb-88f3-9ec67baf9b65",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "name": "Get Emergency Contacts",
+      "url": "http://127.0.0.1:8000/api/auth/emergency-contacts/",
+      "method": "GET",
+      "sortNum": 80000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "7a1e98f0-8db2-46bb-9432-71759f9ce3ec",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "name": "Create Emergency Contact",
+      "url": "http://127.0.0.1:8000/api/auth/emergency-contacts/",
+      "method": "POST",
+      "sortNum": 90000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"Jane Doe\",\n  \"relation\": \"Spouse\",\n  \"phone_number\": \"555-1234\"\n}"
+      }
+    },
+    {
+      "_id": "08365394-249d-4ecc-a3aa-aeeb61bd2e5d",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "name": "Delete Emergency Contact",
+      "url": "http://127.0.0.1:8000/api/auth/emergency-contacts/1/",
+      "method": "DELETE",
+      "sortNum": 100000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "88805695-c424-48f6-b825-87ecd2558640",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "8a72e5f1-f662-4b2c-ae19-c7d293a4de4e",
+      "name": "Get Medical Reports",
+      "url": "http://127.0.0.1:8000/api/records/reports/",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "b8a35ca3-7285-400d-a47c-6642a9100ba6",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "8a72e5f1-f662-4b2c-ae19-c7d293a4de4e",
+      "name": "Create Medical Report",
+      "url": "http://127.0.0.1:8000/api/records/reports/",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"title\": \"Annual Blood Test\",\n  \"report_type\": \"blood_test\"\n}"
+      }
+    },
+    {
+      "_id": "ff4acd0f-6648-40f9-8667-285f380679f1",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "8a72e5f1-f662-4b2c-ae19-c7d293a4de4e",
+      "name": "Delete Medical Report",
+      "url": "http://127.0.0.1:8000/api/records/reports/1/",
+      "method": "DELETE",
+      "sortNum": 30000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "3447ead7-79ca-467c-8373-7ad52d9d3cda",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "8a72e5f1-f662-4b2c-ae19-c7d293a4de4e",
+      "name": "Parse Report (OCR & LLM)",
+      "url": "http://127.0.0.1:8000/api/records/ocr/",
+      "method": "POST",
+      "sortNum": 40000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {
+        "type": "formdata",
+        "form": [
+          {
+            "name": "file",
+            "value": "",
+            "type": "file"
+          }
+        ]
+      }
+    },
+    {
+      "_id": "4d1fdaa9-5b0f-41b9-8c61-3e2a6167f9e9",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "5db695a8-cf4c-45d5-895e-a43934324c81",
+      "name": "Get Health Metrics",
+      "url": "http://127.0.0.1:8000/api/metrics/health-metrics/",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "0c4cb64b-9552-45db-ba37-2d9e4f629006",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "5db695a8-cf4c-45d5-895e-a43934324c81",
+      "name": "Create Health Metric",
+      "url": "http://127.0.0.1:8000/api/metrics/health-metrics/",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"metric_type\": \"heart_rate\",\n  \"value\": 72.5,\n  \"unit\": \"bpm\"\n}"
+      }
+    },
+    {
+      "_id": "65773db6-4832-45a4-8fce-678215264425",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "5db695a8-cf4c-45d5-895e-a43934324c81",
+      "name": "Delete Health Metric",
+      "url": "http://127.0.0.1:8000/api/metrics/health-metrics/1/",
+      "method": "DELETE",
+      "sortNum": 30000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "3003f40a-99e8-4811-a2a4-7182399bdd42",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "be1db121-ba6d-4a17-88b4-732064dddec1",
+      "name": "Get Wearable Integrations",
+      "url": "http://127.0.0.1:8000/api/fitness/integrations/",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "a6b8cd48-61f0-4fcf-824e-396df1a6105d",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "be1db121-ba6d-4a17-88b4-732064dddec1",
+      "name": "Create Wearable Integration",
+      "url": "http://127.0.0.1:8000/api/fitness/integrations/",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"provider\": \"apple_health\",\n  \"access_token\": \"token123\"\n}"
+      }
+    },
+    {
+      "_id": "398961c0-60e8-41bb-b478-643763223ba1",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "be1db121-ba6d-4a17-88b4-732064dddec1",
+      "name": "Get Daily Summaries",
+      "url": "http://127.0.0.1:8000/api/fitness/daily-summaries/",
+      "method": "GET",
+      "sortNum": 30000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "cd154c7d-12cd-4c07-9b10-e3c6de7527c0",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "be1db121-ba6d-4a17-88b4-732064dddec1",
+      "name": "Create Daily Summary",
+      "url": "http://127.0.0.1:8000/api/fitness/daily-summaries/",
+      "method": "POST",
+      "sortNum": 40000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"date\": \"2026-05-15\",\n  \"steps\": 10000,\n  \"calories_burned\": 2500.0\n}"
+      }
+    },
+    {
+      "_id": "fc2d2308-272e-441d-a71b-041ad1de7a95",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "52325073-3381-4ae5-a5bf-d1bbb00f2267",
+      "name": "Get Reminders",
+      "url": "http://127.0.0.1:8000/api/reminders/reminders/",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "46caac41-77b2-4a34-81a1-91a9e90da107",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "52325073-3381-4ae5-a5bf-d1bbb00f2267",
+      "name": "Create Reminder",
+      "url": "http://127.0.0.1:8000/api/reminders/reminders/",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"title\": \"Take Medication\",\n  \"reminder_type\": \"medication\",\n  \"scheduled_time\": \"2026-05-15T08:00:00Z\"\n}"
+      }
+    },
+    {
+      "_id": "dba5077b-481c-44de-aa3d-84288d643694",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "52325073-3381-4ae5-a5bf-d1bbb00f2267",
+      "name": "Delete Reminder",
+      "url": "http://127.0.0.1:8000/api/reminders/reminders/1/",
+      "method": "DELETE",
+      "sortNum": 30000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "ffb0d1a8-a0a1-4db2-99d3-3aabd81b4a20",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "d5cc66bb-df8e-47b3-8008-e01daa9a65cf",
+      "name": "Get AI Logs",
+      "url": "http://127.0.0.1:8000/api/ai-logs/logs/",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "5e06b58c-ac61-4475-8c61-7ba9aa589586",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "d5cc66bb-df8e-47b3-8008-e01daa9a65cf",
+      "name": "Create AI Log",
+      "url": "http://127.0.0.1:8000/api/ai-logs/logs/",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"interaction_type\": \"ocr_analysis\",\n  \"prompt\": \"Analyze this report\",\n  \"response\": \"Patient is healthy\"\n}"
+      }
+    },
+    {
+      "_id": "002d154a-005f-4a2a-883d-7913f477b412",
+      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
+      "containerId": "56c4f100-f8a1-40ce-bac5-75e86d0934ca",
+      "name": "Get API Logs",
+      "url": "http://127.0.0.1:8000/api/integrations/logs/",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    }
+  ]
+}

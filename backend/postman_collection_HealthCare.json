@@ -1,0 +1,886 @@
+{
+  "info": {
+    "name": "HealthCare API Complete",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth & Users",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"newuser@example.com\",\n  \"password\": \"password123\",\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\"\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/register/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Login (Get JWT)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"testuser@example.com\",\n  \"password\": \"testpass123\"\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/login/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Refresh Token",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"refresh\": \"<paste-refresh-token-here>\"\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/refresh/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "refresh"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get User Profile",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/profile/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "profile"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update User Profile",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"first_name\": \"Updated\"\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/profile/1/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "profile",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Health Profile",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/health-profile/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "health-profile"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Health Profile",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"blood_group\": \"A+\"\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/health-profile/1/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "health-profile",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Emergency Contacts",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/emergency-contacts/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "emergency-contacts"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Emergency Contact",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Jane Doe\",\n  \"relation\": \"Spouse\",\n  \"phone_number\": \"555-1234\"\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/emergency-contacts/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "emergency-contacts"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Emergency Contact",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/emergency-contacts/1/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "emergency-contacts",
+                "1"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Medical Records",
+      "item": [
+        {
+          "name": "Get Medical Reports",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/records/reports/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "records",
+                "reports"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Medical Report",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Annual Blood Test\",\n  \"report_type\": \"blood_test\"\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/records/reports/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "records",
+                "reports"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Medical Report",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/records/reports/1/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "records",
+                "reports",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Parse Report (OCR & LLM)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": ""
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/records/ocr/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "records",
+                "ocr"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Health Metrics",
+      "item": [
+        {
+          "name": "Get Health Metrics",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/metrics/health-metrics/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "metrics",
+                "health-metrics"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Health Metric",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"metric_type\": \"heart_rate\",\n  \"value\": 72.5,\n  \"unit\": \"bpm\"\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/metrics/health-metrics/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "metrics",
+                "health-metrics"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Health Metric",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/metrics/health-metrics/1/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "metrics",
+                "health-metrics",
+                "1"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Fitness Data",
+      "item": [
+        {
+          "name": "Get Wearable Integrations",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/fitness/integrations/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "fitness",
+                "integrations"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Wearable Integration",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"provider\": \"apple_health\",\n  \"access_token\": \"token123\"\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/fitness/integrations/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "fitness",
+                "integrations"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Daily Summaries",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/fitness/daily-summaries/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "fitness",
+                "daily-summaries"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Daily Summary",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"date\": \"2026-05-15\",\n  \"steps\": 10000,\n  \"calories_burned\": 2500.0\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/fitness/daily-summaries/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "fitness",
+                "daily-summaries"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reminders",
+      "item": [
+        {
+          "name": "Get Reminders",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/reminders/reminders/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "reminders",
+                "reminders"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Reminder",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Take Medication\",\n  \"reminder_type\": \"medication\",\n  \"scheduled_time\": \"2026-05-15T08:00:00Z\"\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/reminders/reminders/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "reminders",
+                "reminders"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Reminder",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/reminders/reminders/1/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "reminders",
+                "reminders",
+                "1"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "AI System Logs",
+      "item": [
+        {
+          "name": "Get AI Logs",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/ai-logs/logs/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "ai-logs",
+                "logs"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create AI Log",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"interaction_type\": \"ocr_analysis\",\n  \"prompt\": \"Analyze this report\",\n  \"response\": \"Patient is healthy\"\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/ai-logs/logs/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "ai-logs",
+                "logs"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Hospital Integrations",
+      "item": [
+        {
+          "name": "Get API Logs",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/integrations/logs/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "integrations",
+                "logs"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
