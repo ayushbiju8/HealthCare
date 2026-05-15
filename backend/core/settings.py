@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'reminders',
     'ai_logs',
     'integrations',
+    'medicine',
 ]
 
 MIDDLEWARE = [

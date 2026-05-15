@@ -1,6 +1,7 @@
 {
   "info": {
-    "name": "HealthCare API Complete",
+    "name": "HealthCare API v2",
+    "description": "Complete Healthcare Platform API \u2014 JWT authenticated. All POST bodies match Django model fields.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -17,10 +18,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"email\": \"newuser@example.com\",\n  \"password\": \"password123\",\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\"\n}"
-            },
             "url": {
               "raw": "http://127.0.0.1:8000/api/auth/register/",
               "host": [
@@ -33,8 +30,18 @@
               "path": [
                 "api",
                 "auth",
-                "register"
+                "register",
+                ""
               ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"testuser@example.com\",\n  \"password\": \"testpass123\",\n  \"username\": \"testuser\",\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             }
           }
         },
@@ -48,10 +55,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"email\": \"testuser@example.com\",\n  \"password\": \"testpass123\"\n}"
-            },
             "url": {
               "raw": "http://127.0.0.1:8000/api/auth/login/",
               "host": [
@@ -64,8 +67,18 @@
               "path": [
                 "api",
                 "auth",
-                "login"
+                "login",
+                ""
               ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"testuser@example.com\",\n  \"password\": \"testpass123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             }
           }
         },
@@ -79,10 +92,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"refresh\": \"<paste-refresh-token-here>\"\n}"
-            },
             "url": {
               "raw": "http://127.0.0.1:8000/api/auth/refresh/",
               "host": [
@@ -95,13 +104,23 @@
               "path": [
                 "api",
                 "auth",
-                "refresh"
+                "refresh",
+                ""
               ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"refresh\": \"<paste-refresh-token-here>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             }
           }
         },
         {
-          "name": "Get User Profile",
+          "name": "List User Profiles",
           "request": {
             "method": "GET",
             "header": [
@@ -110,7 +129,6 @@
                 "value": "Bearer <paste-token-here>"
               }
             ],
-            "body": null,
             "url": {
               "raw": "http://127.0.0.1:8000/api/auth/profile/",
               "host": [
@@ -123,7 +141,8 @@
               "path": [
                 "api",
                 "auth",
-                "profile"
+                "profile",
+                ""
               ]
             }
           }
@@ -142,10 +161,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"first_name\": \"Updated\"\n}"
-            },
             "url": {
               "raw": "http://127.0.0.1:8000/api/auth/profile/1/",
               "host": [
@@ -159,8 +174,18 @@
                 "api",
                 "auth",
                 "profile",
-                "1"
+                "1",
+                ""
               ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"first_name\": \"Updated\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             }
           }
         },
@@ -174,7 +199,6 @@
                 "value": "Bearer <paste-token-here>"
               }
             ],
-            "body": null,
             "url": {
               "raw": "http://127.0.0.1:8000/api/auth/health-profile/",
               "host": [
@@ -187,7 +211,8 @@
               "path": [
                 "api",
                 "auth",
-                "health-profile"
+                "health-profile",
+                ""
               ]
             }
           }
@@ -206,10 +231,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"blood_group\": \"A+\"\n}"
-            },
             "url": {
               "raw": "http://127.0.0.1:8000/api/auth/health-profile/1/",
               "host": [
@@ -223,13 +244,23 @@
                 "api",
                 "auth",
                 "health-profile",
-                "1"
+                "1",
+                ""
               ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"blood_group\": \"A+\",\n  \"height_cm\": \"175.00\",\n  \"weight_kg\": \"70.00\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             }
           }
         },
         {
-          "name": "Get Emergency Contacts",
+          "name": "List Emergency Contacts",
           "request": {
             "method": "GET",
             "header": [
@@ -238,7 +269,6 @@
                 "value": "Bearer <paste-token-here>"
               }
             ],
-            "body": null,
             "url": {
               "raw": "http://127.0.0.1:8000/api/auth/emergency-contacts/",
               "host": [
@@ -251,7 +281,8 @@
               "path": [
                 "api",
                 "auth",
-                "emergency-contacts"
+                "emergency-contacts",
+                ""
               ]
             }
           }
@@ -270,10 +301,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"Jane Doe\",\n  \"relation\": \"Spouse\",\n  \"phone_number\": \"555-1234\"\n}"
-            },
             "url": {
               "raw": "http://127.0.0.1:8000/api/auth/emergency-contacts/",
               "host": [
@@ -286,8 +313,18 @@
               "path": [
                 "api",
                 "auth",
-                "emergency-contacts"
+                "emergency-contacts",
+                ""
               ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Jane Doe\",\n  \"relation\": \"Spouse\",\n  \"phone_number\": \"555-1234\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             }
           }
         },
@@ -301,7 +338,6 @@
                 "value": "Bearer <paste-token-here>"
               }
             ],
-            "body": null,
             "url": {
               "raw": "http://127.0.0.1:8000/api/auth/emergency-contacts/1/",
               "host": [
@@ -315,7 +351,8 @@
                 "api",
                 "auth",
                 "emergency-contacts",
-                "1"
+                "1",
+                ""
               ]
             }
           }
@@ -326,7 +363,7 @@
       "name": "Medical Records",
       "item": [
         {
-          "name": "Get Medical Reports",
+          "name": "List Medical Reports",
           "request": {
             "method": "GET",
             "header": [
@@ -335,7 +372,6 @@
                 "value": "Bearer <paste-token-here>"
               }
             ],
-            "body": null,
             "url": {
               "raw": "http://127.0.0.1:8000/api/records/reports/",
               "host": [
@@ -348,13 +384,14 @@
               "path": [
                 "api",
                 "records",
-                "reports"
+                "reports",
+                ""
               ]
             }
           }
         },
         {
-          "name": "Create Medical Report",
+          "name": "Create Medical Report (Manual)",
           "request": {
             "method": "POST",
             "header": [
@@ -367,10 +404,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"title\": \"Annual Blood Test\",\n  \"report_type\": \"blood_test\"\n}"
-            },
             "url": {
               "raw": "http://127.0.0.1:8000/api/records/reports/",
               "host": [
@@ -383,7 +416,46 @@
               "path": [
                 "api",
                 "records",
-                "reports"
+                "reports",
+                ""
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Annual Blood Test\",\n  \"report_type\": \"UPLOAD_PDF\",\n  \"date_issued\": \"2026-05-15\",\n  \"source_hospital\": \"City Hospital\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get Medical Report",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/records/reports/1/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "records",
+                "reports",
+                "1",
+                ""
               ]
             }
           }
@@ -398,7 +470,6 @@
                 "value": "Bearer <paste-token-here>"
               }
             ],
-            "body": null,
             "url": {
               "raw": "http://127.0.0.1:8000/api/records/reports/1/",
               "host": [
@@ -412,13 +483,14 @@
                 "api",
                 "records",
                 "reports",
-                "1"
+                "1",
+                ""
               ]
             }
           }
         },
         {
-          "name": "Parse Report (OCR & LLM)",
+          "name": "OCR Parse Report (Upload PDF/Image)",
           "request": {
             "method": "POST",
             "header": [
@@ -427,16 +499,6 @@
                 "value": "Bearer <paste-token-here>"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "file",
-                  "type": "file",
-                  "src": ""
-                }
-              ]
-            },
             "url": {
               "raw": "http://127.0.0.1:8000/api/records/ocr/",
               "host": [
@@ -449,9 +511,21 @@
               "path": [
                 "api",
                 "records",
-                "ocr"
+                "ocr",
+                ""
               ]
-            }
+            },
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": ""
+                }
+              ]
+            },
+            "description": "Upload a PDF or JPEG/PNG. Returns report_id, metrics_extracted, and parsed JSON."
           }
         }
       ]
@@ -460,7 +534,7 @@
       "name": "Health Metrics",
       "item": [
         {
-          "name": "Get Health Metrics",
+          "name": "List Health Metrics",
           "request": {
             "method": "GET",
             "header": [
@@ -469,7 +543,6 @@
                 "value": "Bearer <paste-token-here>"
               }
             ],
-            "body": null,
             "url": {
               "raw": "http://127.0.0.1:8000/api/metrics/health-metrics/",
               "host": [
@@ -482,13 +555,14 @@
               "path": [
                 "api",
                 "metrics",
-                "health-metrics"
+                "health-metrics",
+                ""
               ]
             }
           }
         },
         {
-          "name": "Create Health Metric",
+          "name": "Create Health Metric (Manual)",
           "request": {
             "method": "POST",
             "header": [
@@ -501,10 +575,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"metric_type\": \"heart_rate\",\n  \"value\": 72.5,\n  \"unit\": \"bpm\"\n}"
-            },
             "url": {
               "raw": "http://127.0.0.1:8000/api/metrics/health-metrics/",
               "host": [
@@ -517,7 +587,46 @@
               "path": [
                 "api",
                 "metrics",
-                "health-metrics"
+                "health-metrics",
+                ""
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"metric_type\": \"GLUCOSE\",\n  \"value_numeric\": \"95.00\",\n  \"unit\": \"mg/dL\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get Health Metric",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/metrics/health-metrics/1/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "metrics",
+                "health-metrics",
+                "1",
+                ""
               ]
             }
           }
@@ -532,7 +641,6 @@
                 "value": "Bearer <paste-token-here>"
               }
             ],
-            "body": null,
             "url": {
               "raw": "http://127.0.0.1:8000/api/metrics/health-metrics/1/",
               "host": [
@@ -546,7 +654,8 @@
                 "api",
                 "metrics",
                 "health-metrics",
-                "1"
+                "1",
+                ""
               ]
             }
           }
@@ -557,7 +666,7 @@
       "name": "Fitness Data",
       "item": [
         {
-          "name": "Get Wearable Integrations",
+          "name": "List Wearable Integrations",
           "request": {
             "method": "GET",
             "header": [
@@ -566,7 +675,6 @@
                 "value": "Bearer <paste-token-here>"
               }
             ],
-            "body": null,
             "url": {
               "raw": "http://127.0.0.1:8000/api/fitness/integrations/",
               "host": [
@@ -579,7 +687,8 @@
               "path": [
                 "api",
                 "fitness",
-                "integrations"
+                "integrations",
+                ""
               ]
             }
           }
@@ -598,10 +707,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"provider\": \"apple_health\",\n  \"access_token\": \"token123\"\n}"
-            },
             "url": {
               "raw": "http://127.0.0.1:8000/api/fitness/integrations/",
               "host": [
@@ -614,13 +719,23 @@
               "path": [
                 "api",
                 "fitness",
-                "integrations"
+                "integrations",
+                ""
               ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"provider\": \"GOOGLE_FIT\",\n  \"access_token\": \"access_token_here\",\n  \"refresh_token\": \"refresh_token_here\",\n  \"token_expires_at\": \"2027-01-01T00:00:00Z\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             }
           }
         },
         {
-          "name": "Get Daily Summaries",
+          "name": "List Daily Summaries",
           "request": {
             "method": "GET",
             "header": [
@@ -629,7 +744,6 @@
                 "value": "Bearer <paste-token-here>"
               }
             ],
-            "body": null,
             "url": {
               "raw": "http://127.0.0.1:8000/api/fitness/daily-summaries/",
               "host": [
@@ -642,7 +756,8 @@
               "path": [
                 "api",
                 "fitness",
-                "daily-summaries"
+                "daily-summaries",
+                ""
               ]
             }
           }
@@ -661,10 +776,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"date\": \"2026-05-15\",\n  \"steps\": 10000,\n  \"calories_burned\": 2500.0\n}"
-            },
             "url": {
               "raw": "http://127.0.0.1:8000/api/fitness/daily-summaries/",
               "host": [
@@ -677,8 +788,18 @@
               "path": [
                 "api",
                 "fitness",
-                "daily-summaries"
+                "daily-summaries",
+                ""
               ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"date\": \"2026-05-15\",\n  \"total_steps\": 10000,\n  \"avg_heart_rate\": 72,\n  \"calories_burned\": \"2500.00\",\n  \"sleep_minutes\": 480\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             }
           }
         }
@@ -688,7 +809,7 @@
       "name": "Reminders",
       "item": [
         {
-          "name": "Get Reminders",
+          "name": "List Reminders",
           "request": {
             "method": "GET",
             "header": [
@@ -697,7 +818,6 @@
                 "value": "Bearer <paste-token-here>"
               }
             ],
-            "body": null,
             "url": {
               "raw": "http://127.0.0.1:8000/api/reminders/reminders/",
               "host": [
@@ -710,7 +830,8 @@
               "path": [
                 "api",
                 "reminders",
-                "reminders"
+                "reminders",
+                ""
               ]
             }
           }
@@ -729,10 +850,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"title\": \"Take Medication\",\n  \"reminder_type\": \"medication\",\n  \"scheduled_time\": \"2026-05-15T08:00:00Z\"\n}"
-            },
             "url": {
               "raw": "http://127.0.0.1:8000/api/reminders/reminders/",
               "host": [
@@ -745,22 +862,35 @@
               "path": [
                 "api",
                 "reminders",
-                "reminders"
+                "reminders",
+                ""
               ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Take Medication\",\n  \"type\": \"MEDICINE\",\n  \"due_datetime\": \"2026-05-15T08:00:00Z\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             }
           }
         },
         {
-          "name": "Delete Reminder",
+          "name": "Update Reminder",
           "request": {
-            "method": "DELETE",
+            "method": "PATCH",
             "header": [
               {
                 "key": "Authorization",
                 "value": "Bearer <paste-token-here>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
               }
             ],
-            "body": null,
             "url": {
               "raw": "http://127.0.0.1:8000/api/reminders/reminders/1/",
               "host": [
@@ -774,7 +904,46 @@
                 "api",
                 "reminders",
                 "reminders",
+                "1",
+                ""
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"is_active\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete Reminder",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/reminders/reminders/1/",
+              "host": [
+                "127",
+                "0",
+                "0",
                 "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "reminders",
+                "reminders",
+                "1",
+                ""
               ]
             }
           }
@@ -785,7 +954,7 @@
       "name": "AI System Logs",
       "item": [
         {
-          "name": "Get AI Logs",
+          "name": "List AI Logs",
           "request": {
             "method": "GET",
             "header": [
@@ -794,7 +963,6 @@
                 "value": "Bearer <paste-token-here>"
               }
             ],
-            "body": null,
             "url": {
               "raw": "http://127.0.0.1:8000/api/ai-logs/logs/",
               "host": [
@@ -807,13 +975,14 @@
               "path": [
                 "api",
                 "ai-logs",
-                "logs"
+                "logs",
+                ""
               ]
             }
           }
         },
         {
-          "name": "Create AI Log",
+          "name": "Create AI Log (Manual)",
           "request": {
             "method": "POST",
             "header": [
@@ -826,10 +995,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"interaction_type\": \"ocr_analysis\",\n  \"prompt\": \"Analyze this report\",\n  \"response\": \"Patient is healthy\"\n}"
-            },
             "url": {
               "raw": "http://127.0.0.1:8000/api/ai-logs/logs/",
               "host": [
@@ -842,7 +1007,46 @@
               "path": [
                 "api",
                 "ai-logs",
-                "logs"
+                "logs",
+                ""
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"context\": \"GENERAL_CHAT\",\n  \"prompt\": \"What is my glucose level?\",\n  \"response\": \"Your last recorded glucose was 95 mg/dL.\",\n  \"tokens_used\": 120\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete AI Log",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/ai-logs/logs/1/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "ai-logs",
+                "logs",
+                "1",
+                ""
               ]
             }
           }
@@ -850,10 +1054,95 @@
       ]
     },
     {
-      "name": "Hospital Integrations",
+      "name": "Medicine Analysis",
       "item": [
         {
-          "name": "Get API Logs",
+          "name": "Analyse Medicine (by Name)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/medicine/text/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "medicine",
+                "text",
+                ""
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"medicine_name\": \"Ibuprofen\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Analyse Medicine (by Image)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer <paste-token-here>"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/medicine/image/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "medicine",
+                "image",
+                ""
+              ]
+            },
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": ""
+                }
+              ]
+            },
+            "description": "Upload a JPEG/PNG photo of the medicine packaging. Returns name + full pharmaceutical info."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Hospital Integrations (Audit Logs)",
+      "item": [
+        {
+          "name": "List API Audit Logs",
           "request": {
             "method": "GET",
             "header": [
@@ -862,7 +1151,6 @@
                 "value": "Bearer <paste-token-here>"
               }
             ],
-            "body": null,
             "url": {
               "raw": "http://127.0.0.1:8000/api/integrations/logs/",
               "host": [
@@ -875,7 +1163,8 @@
               "path": [
                 "api",
                 "integrations",
-                "logs"
+                "logs",
+                ""
               ]
             }
           }

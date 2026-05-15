@@ -171,8 +171,11 @@ def query_medicine_info(medicine_name):
     return parsed
 
 
+from rest_framework.permissions import IsAuthenticated
+
 class MedicineTextView(APIView):
     """POST /api/medicine/text/ — Get medicine info from text name."""
+    permission_classes = [IsAuthenticated]
 
     def post(self, request):
         medicine_name = request.data.get("medicine_name")
@@ -206,6 +209,7 @@ class MedicineTextView(APIView):
 
 class MedicineImageView(APIView):
     """POST /api/medicine/image/ — Extract medicine info from image."""
+    permission_classes = [IsAuthenticated]
 
     def post(self, request):
         uploaded = request.FILES.get("file")

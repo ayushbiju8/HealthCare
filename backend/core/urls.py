@@ -26,4 +26,5 @@ urlpatterns = [
     path('api/reminders/', include('reminders.urls')),
     path('api/ai-logs/', include('ai_logs.urls')),
     path('api/integrations/', include('integrations.urls')),
+    path('api/medicine/', include('medicine.urls')),
 ]

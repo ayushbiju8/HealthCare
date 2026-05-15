@@ -1,66 +1,73 @@
 {
   "clientName": "Thunder Client",
-  "collectionName": "HealthCare API Complete",
+  "collectionName": "HealthCare API v2",
   "dateExported": "2026-05-15T00:00:00.000Z",
   "version": "1.2",
   "coreVersion": "2.2.0",
-  "_id": "c59d9be2-9317-4467-9896-af1907ccbc37",
+  "_id": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
   "folders": [
     {
-      "_id": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "_id": "2d8b6a58-727b-4c9f-b73b-e0e0869bf632",
       "name": "Auth & Users",
       "containerId": "",
       "created": "2026-05-15T00:00:00.000Z",
       "sortNum": 10000
     },
     {
-      "_id": "8a72e5f1-f662-4b2c-ae19-c7d293a4de4e",
+      "_id": "87b34120-896c-4976-90e0-ed3504b4fd06",
       "name": "Medical Records",
       "containerId": "",
       "created": "2026-05-15T00:00:00.000Z",
       "sortNum": 20000
     },
     {
-      "_id": "5db695a8-cf4c-45d5-895e-a43934324c81",
+      "_id": "2d907d79-43a1-4571-a4d4-e912c21a5063",
       "name": "Health Metrics",
       "containerId": "",
       "created": "2026-05-15T00:00:00.000Z",
       "sortNum": 30000
     },
     {
-      "_id": "be1db121-ba6d-4a17-88b4-732064dddec1",
+      "_id": "02ceabdc-ceaf-4e54-b70c-bc6e435a1e1a",
       "name": "Fitness Data",
       "containerId": "",
       "created": "2026-05-15T00:00:00.000Z",
       "sortNum": 40000
     },
     {
-      "_id": "52325073-3381-4ae5-a5bf-d1bbb00f2267",
+      "_id": "b5e362b8-4040-4369-97e0-df234e0df54b",
       "name": "Reminders",
       "containerId": "",
       "created": "2026-05-15T00:00:00.000Z",
       "sortNum": 50000
     },
     {
-      "_id": "d5cc66bb-df8e-47b3-8008-e01daa9a65cf",
+      "_id": "1bee194f-ca3b-46da-8f4c-5e51b6cba4aa",
       "name": "AI System Logs",
       "containerId": "",
       "created": "2026-05-15T00:00:00.000Z",
       "sortNum": 60000
     },
     {
-      "_id": "56c4f100-f8a1-40ce-bac5-75e86d0934ca",
-      "name": "Hospital Integrations",
+      "_id": "04cfe79a-0827-42ab-ba90-20cf7052845d",
+      "name": "Medicine Analysis",
       "containerId": "",
       "created": "2026-05-15T00:00:00.000Z",
       "sortNum": 70000
+    },
+    {
+      "_id": "fb49cfd3-7151-4557-a514-37570f2a36ce",
+      "name": "Hospital Integrations (Audit Logs)",
+      "containerId": "",
+      "created": "2026-05-15T00:00:00.000Z",
+      "sortNum": 80000
     }
   ],
   "requests": [
     {
-      "_id": "6df01ce3-46ac-49b6-bd96-7458f058f151",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "_id": "6e42f3dd-77fb-4be5-9209-13ee3f84c583",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "2d8b6a58-727b-4c9f-b73b-e0e0869bf632",
       "name": "Register User",
       "url": "http://127.0.0.1:8000/api/auth/register/",
       "method": "POST",
@@ -70,13 +77,13 @@
       "headers": [],
       "body": {
         "type": "json",
-        "raw": "{\n  \"email\": \"newuser@example.com\",\n  \"password\": \"password123\",\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\"\n}"
+        "raw": "{\n  \"email\": \"testuser@example.com\",\n  \"password\": \"testpass123\",\n  \"username\": \"testuser\",\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\"\n}"
       }
     },
     {
-      "_id": "f395da38-6354-4e3c-8892-73fb35469884",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "_id": "c7347668-4f5e-4163-b497-76323a789bff",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "2d8b6a58-727b-4c9f-b73b-e0e0869bf632",
       "name": "Login (Get JWT)",
       "url": "http://127.0.0.1:8000/api/auth/login/",
       "method": "POST",
@@ -90,9 +97,9 @@
       }
     },
     {
-      "_id": "13a956d8-6b2d-421e-9a5c-6d2c0ea25bdb",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "_id": "6933329d-2819-4080-b2cb-332c9983b42b",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "2d8b6a58-727b-4c9f-b73b-e0e0869bf632",
       "name": "Refresh Token",
       "url": "http://127.0.0.1:8000/api/auth/refresh/",
       "method": "POST",
@@ -106,10 +113,10 @@
       }
     },
     {
-      "_id": "77bc2e11-5931-48d0-869d-c6ecb440ca4c",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
-      "name": "Get User Profile",
+      "_id": "3b5d5836-ea11-454d-b789-156411bde260",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "2d8b6a58-727b-4c9f-b73b-e0e0869bf632",
+      "name": "List User Profiles",
       "url": "http://127.0.0.1:8000/api/auth/profile/",
       "method": "GET",
       "sortNum": 40000,
@@ -124,9 +131,9 @@
       "body": {}
     },
     {
-      "_id": "837cf24e-cdc3-4905-8bf1-9b281db50012",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "_id": "7f34f63b-709a-459a-86ec-443c22a71dd4",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "2d8b6a58-727b-4c9f-b73b-e0e0869bf632",
       "name": "Update User Profile",
       "url": "http://127.0.0.1:8000/api/auth/profile/1/",
       "method": "PATCH",
@@ -145,9 +152,9 @@
       }
     },
     {
-      "_id": "a6d1eaa6-835e-42bc-8b46-3588b8da04aa",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "_id": "c6ca25dd-5cca-4328-aa12-4f7a5636a40e",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "2d8b6a58-727b-4c9f-b73b-e0e0869bf632",
       "name": "Get Health Profile",
       "url": "http://127.0.0.1:8000/api/auth/health-profile/",
       "method": "GET",
@@ -163,9 +170,9 @@
       "body": {}
     },
     {
-      "_id": "ba1ede4b-c8ee-4520-9098-72ee3d1b17f0",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "_id": "356bab3f-62c8-4546-bdb5-58a5784446e8",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "2d8b6a58-727b-4c9f-b73b-e0e0869bf632",
       "name": "Update Health Profile",
       "url": "http://127.0.0.1:8000/api/auth/health-profile/1/",
       "method": "PATCH",
@@ -180,14 +187,14 @@
       ],
       "body": {
         "type": "json",
-        "raw": "{\n  \"blood_group\": \"A+\"\n}"
+        "raw": "{\n  \"blood_group\": \"A+\",\n  \"height_cm\": \"175.00\",\n  \"weight_kg\": \"70.00\"\n}"
       }
     },
     {
-      "_id": "42ae740d-52e3-42fb-88f3-9ec67baf9b65",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
-      "name": "Get Emergency Contacts",
+      "_id": "5a5ecb5a-e1b2-4f2e-b9ed-1d7bb834e2c2",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "2d8b6a58-727b-4c9f-b73b-e0e0869bf632",
+      "name": "List Emergency Contacts",
       "url": "http://127.0.0.1:8000/api/auth/emergency-contacts/",
       "method": "GET",
       "sortNum": 80000,
@@ -202,9 +209,9 @@
       "body": {}
     },
     {
-      "_id": "7a1e98f0-8db2-46bb-9432-71759f9ce3ec",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "_id": "4b9c0794-336d-4c7e-bbdb-2eac1ebb0e7e",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "2d8b6a58-727b-4c9f-b73b-e0e0869bf632",
       "name": "Create Emergency Contact",
       "url": "http://127.0.0.1:8000/api/auth/emergency-contacts/",
       "method": "POST",
@@ -223,9 +230,9 @@
       }
     },
     {
-      "_id": "08365394-249d-4ecc-a3aa-aeeb61bd2e5d",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "2d7ca968-9edf-4739-b430-2bad96242327",
+      "_id": "7eb79d88-d16a-4fd1-b642-f25da7f369a4",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "2d8b6a58-727b-4c9f-b73b-e0e0869bf632",
       "name": "Delete Emergency Contact",
       "url": "http://127.0.0.1:8000/api/auth/emergency-contacts/1/",
       "method": "DELETE",
@@ -241,10 +248,10 @@
       "body": {}
     },
     {
-      "_id": "88805695-c424-48f6-b825-87ecd2558640",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "8a72e5f1-f662-4b2c-ae19-c7d293a4de4e",
-      "name": "Get Medical Reports",
+      "_id": "27720791-ca81-4a62-bd08-af966f8f49d6",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "87b34120-896c-4976-90e0-ed3504b4fd06",
+      "name": "List Medical Reports",
       "url": "http://127.0.0.1:8000/api/records/reports/",
       "method": "GET",
       "sortNum": 10000,
@@ -259,10 +266,10 @@
       "body": {}
     },
     {
-      "_id": "b8a35ca3-7285-400d-a47c-6642a9100ba6",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "8a72e5f1-f662-4b2c-ae19-c7d293a4de4e",
-      "name": "Create Medical Report",
+      "_id": "53b66b59-dc4b-4819-b6a0-ed7e2e22dac7",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "87b34120-896c-4976-90e0-ed3504b4fd06",
+      "name": "Create Medical Report (Manual)",
       "url": "http://127.0.0.1:8000/api/records/reports/",
       "method": "POST",
       "sortNum": 20000,
@@ -276,16 +283,16 @@
       ],
       "body": {
         "type": "json",
-        "raw": "{\n  \"title\": \"Annual Blood Test\",\n  \"report_type\": \"blood_test\"\n}"
+        "raw": "{\n  \"title\": \"Annual Blood Test\",\n  \"report_type\": \"UPLOAD_PDF\",\n  \"date_issued\": \"2026-05-15\",\n  \"source_hospital\": \"City Hospital\"\n}"
       }
     },
     {
-      "_id": "ff4acd0f-6648-40f9-8667-285f380679f1",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "8a72e5f1-f662-4b2c-ae19-c7d293a4de4e",
-      "name": "Delete Medical Report",
+      "_id": "ab0ef25b-7026-4281-b1f8-9831ee3700cc",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "87b34120-896c-4976-90e0-ed3504b4fd06",
+      "name": "Get Medical Report",
       "url": "http://127.0.0.1:8000/api/records/reports/1/",
-      "method": "DELETE",
+      "method": "GET",
       "sortNum": 30000,
       "created": "2026-05-15T00:00:00.000Z",
       "modified": "2026-05-15T00:00:00.000Z",
@@ -298,13 +305,31 @@
       "body": {}
     },
     {
-      "_id": "3447ead7-79ca-467c-8373-7ad52d9d3cda",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "8a72e5f1-f662-4b2c-ae19-c7d293a4de4e",
-      "name": "Parse Report (OCR & LLM)",
+      "_id": "f709aeca-45d9-492d-a4dc-f67893637121",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "87b34120-896c-4976-90e0-ed3504b4fd06",
+      "name": "Delete Medical Report",
+      "url": "http://127.0.0.1:8000/api/records/reports/1/",
+      "method": "DELETE",
+      "sortNum": 40000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "85e09fd4-5c2c-43ab-a5dd-5bfe8bf05d2c",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "87b34120-896c-4976-90e0-ed3504b4fd06",
+      "name": "OCR Parse Report (Upload PDF/Image)",
       "url": "http://127.0.0.1:8000/api/records/ocr/",
       "method": "POST",
-      "sortNum": 40000,
+      "sortNum": 50000,
       "created": "2026-05-15T00:00:00.000Z",
       "modified": "2026-05-15T00:00:00.000Z",
       "headers": [
@@ -325,10 +350,10 @@
       }
     },
     {
-      "_id": "4d1fdaa9-5b0f-41b9-8c61-3e2a6167f9e9",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "5db695a8-cf4c-45d5-895e-a43934324c81",
-      "name": "Get Health Metrics",
+      "_id": "d1b32e18-8348-4f89-baa8-8ffd2ed60999",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "2d907d79-43a1-4571-a4d4-e912c21a5063",
+      "name": "List Health Metrics",
       "url": "http://127.0.0.1:8000/api/metrics/health-metrics/",
       "method": "GET",
       "sortNum": 10000,
@@ -343,10 +368,10 @@
       "body": {}
     },
     {
-      "_id": "0c4cb64b-9552-45db-ba37-2d9e4f629006",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "5db695a8-cf4c-45d5-895e-a43934324c81",
-      "name": "Create Health Metric",
+      "_id": "d30ecdd7-184c-4ab7-ad8b-40ddc8428847",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "2d907d79-43a1-4571-a4d4-e912c21a5063",
+      "name": "Create Health Metric (Manual)",
       "url": "http://127.0.0.1:8000/api/metrics/health-metrics/",
       "method": "POST",
       "sortNum": 20000,
@@ -360,16 +385,16 @@
       ],
       "body": {
         "type": "json",
-        "raw": "{\n  \"metric_type\": \"heart_rate\",\n  \"value\": 72.5,\n  \"unit\": \"bpm\"\n}"
+        "raw": "{\n  \"metric_type\": \"GLUCOSE\",\n  \"value_numeric\": \"95.00\",\n  \"unit\": \"mg/dL\"\n}"
       }
     },
     {
-      "_id": "65773db6-4832-45a4-8fce-678215264425",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "5db695a8-cf4c-45d5-895e-a43934324c81",
-      "name": "Delete Health Metric",
+      "_id": "04d3999f-e138-404b-807d-d13f95c5f366",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "2d907d79-43a1-4571-a4d4-e912c21a5063",
+      "name": "Get Health Metric",
       "url": "http://127.0.0.1:8000/api/metrics/health-metrics/1/",
-      "method": "DELETE",
+      "method": "GET",
       "sortNum": 30000,
       "created": "2026-05-15T00:00:00.000Z",
       "modified": "2026-05-15T00:00:00.000Z",
@@ -382,10 +407,28 @@
       "body": {}
     },
     {
-      "_id": "3003f40a-99e8-4811-a2a4-7182399bdd42",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "be1db121-ba6d-4a17-88b4-732064dddec1",
-      "name": "Get Wearable Integrations",
+      "_id": "8f01b61a-cf20-4b0b-8a8b-604afa769021",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "2d907d79-43a1-4571-a4d4-e912c21a5063",
+      "name": "Delete Health Metric",
+      "url": "http://127.0.0.1:8000/api/metrics/health-metrics/1/",
+      "method": "DELETE",
+      "sortNum": 40000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "38379716-497d-414d-b5d4-cce013213241",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "02ceabdc-ceaf-4e54-b70c-bc6e435a1e1a",
+      "name": "List Wearable Integrations",
       "url": "http://127.0.0.1:8000/api/fitness/integrations/",
       "method": "GET",
       "sortNum": 10000,
@@ -400,9 +443,9 @@
       "body": {}
     },
     {
-      "_id": "a6b8cd48-61f0-4fcf-824e-396df1a6105d",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "be1db121-ba6d-4a17-88b4-732064dddec1",
+      "_id": "a1341082-9c14-48ae-82b7-78c6a7f013c7",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "02ceabdc-ceaf-4e54-b70c-bc6e435a1e1a",
       "name": "Create Wearable Integration",
       "url": "http://127.0.0.1:8000/api/fitness/integrations/",
       "method": "POST",
@@ -417,14 +460,14 @@
       ],
       "body": {
         "type": "json",
-        "raw": "{\n  \"provider\": \"apple_health\",\n  \"access_token\": \"token123\"\n}"
+        "raw": "{\n  \"provider\": \"GOOGLE_FIT\",\n  \"access_token\": \"access_token_here\",\n  \"refresh_token\": \"refresh_token_here\",\n  \"token_expires_at\": \"2027-01-01T00:00:00Z\"\n}"
       }
     },
     {
-      "_id": "398961c0-60e8-41bb-b478-643763223ba1",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "be1db121-ba6d-4a17-88b4-732064dddec1",
-      "name": "Get Daily Summaries",
+      "_id": "36fafc84-d05b-4401-8d1b-646eca68a301",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "02ceabdc-ceaf-4e54-b70c-bc6e435a1e1a",
+      "name": "List Daily Summaries",
       "url": "http://127.0.0.1:8000/api/fitness/daily-summaries/",
       "method": "GET",
       "sortNum": 30000,
@@ -439,9 +482,9 @@
       "body": {}
     },
     {
-      "_id": "cd154c7d-12cd-4c07-9b10-e3c6de7527c0",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "be1db121-ba6d-4a17-88b4-732064dddec1",
+      "_id": "60f2dbf9-c655-41ce-9ccf-e7cf898deba4",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "02ceabdc-ceaf-4e54-b70c-bc6e435a1e1a",
       "name": "Create Daily Summary",
       "url": "http://127.0.0.1:8000/api/fitness/daily-summaries/",
       "method": "POST",
@@ -456,14 +499,14 @@
       ],
       "body": {
         "type": "json",
-        "raw": "{\n  \"date\": \"2026-05-15\",\n  \"steps\": 10000,\n  \"calories_burned\": 2500.0\n}"
+        "raw": "{\n  \"date\": \"2026-05-15\",\n  \"total_steps\": 10000,\n  \"avg_heart_rate\": 72,\n  \"calories_burned\": \"2500.00\",\n  \"sleep_minutes\": 480\n}"
       }
     },
     {
-      "_id": "fc2d2308-272e-441d-a71b-041ad1de7a95",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "52325073-3381-4ae5-a5bf-d1bbb00f2267",
-      "name": "Get Reminders",
+      "_id": "f6d43b8f-89b1-44ea-ba2c-99a9a96cce26",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "b5e362b8-4040-4369-97e0-df234e0df54b",
+      "name": "List Reminders",
       "url": "http://127.0.0.1:8000/api/reminders/reminders/",
       "method": "GET",
       "sortNum": 10000,
@@ -478,9 +521,9 @@
       "body": {}
     },
     {
-      "_id": "46caac41-77b2-4a34-81a1-91a9e90da107",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "52325073-3381-4ae5-a5bf-d1bbb00f2267",
+      "_id": "1dc23c70-118d-4870-a70c-cfb9a11a30dd",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "b5e362b8-4040-4369-97e0-df234e0df54b",
       "name": "Create Reminder",
       "url": "http://127.0.0.1:8000/api/reminders/reminders/",
       "method": "POST",
@@ -495,17 +538,38 @@
       ],
       "body": {
         "type": "json",
-        "raw": "{\n  \"title\": \"Take Medication\",\n  \"reminder_type\": \"medication\",\n  \"scheduled_time\": \"2026-05-15T08:00:00Z\"\n}"
+        "raw": "{\n  \"title\": \"Take Medication\",\n  \"type\": \"MEDICINE\",\n  \"due_datetime\": \"2026-05-15T08:00:00Z\"\n}"
       }
     },
     {
-      "_id": "dba5077b-481c-44de-aa3d-84288d643694",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "52325073-3381-4ae5-a5bf-d1bbb00f2267",
+      "_id": "ad9effe6-96b1-4b87-8078-9ad5ebc5d289",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "b5e362b8-4040-4369-97e0-df234e0df54b",
+      "name": "Update Reminder",
+      "url": "http://127.0.0.1:8000/api/reminders/reminders/1/",
+      "method": "PATCH",
+      "sortNum": 30000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"is_active\": false\n}"
+      }
+    },
+    {
+      "_id": "861fff57-e246-40e2-a5ba-006f1935061e",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "b5e362b8-4040-4369-97e0-df234e0df54b",
       "name": "Delete Reminder",
       "url": "http://127.0.0.1:8000/api/reminders/reminders/1/",
       "method": "DELETE",
-      "sortNum": 30000,
+      "sortNum": 40000,
       "created": "2026-05-15T00:00:00.000Z",
       "modified": "2026-05-15T00:00:00.000Z",
       "headers": [
@@ -517,10 +581,10 @@
       "body": {}
     },
     {
-      "_id": "ffb0d1a8-a0a1-4db2-99d3-3aabd81b4a20",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "d5cc66bb-df8e-47b3-8008-e01daa9a65cf",
-      "name": "Get AI Logs",
+      "_id": "52d3745e-e0c8-4044-8824-c1d23a42812b",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "1bee194f-ca3b-46da-8f4c-5e51b6cba4aa",
+      "name": "List AI Logs",
       "url": "http://127.0.0.1:8000/api/ai-logs/logs/",
       "method": "GET",
       "sortNum": 10000,
@@ -535,10 +599,10 @@
       "body": {}
     },
     {
-      "_id": "5e06b58c-ac61-4475-8c61-7ba9aa589586",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "d5cc66bb-df8e-47b3-8008-e01daa9a65cf",
-      "name": "Create AI Log",
+      "_id": "34def063-2f31-4cb6-b0c1-e115bdda5967",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "1bee194f-ca3b-46da-8f4c-5e51b6cba4aa",
+      "name": "Create AI Log (Manual)",
       "url": "http://127.0.0.1:8000/api/ai-logs/logs/",
       "method": "POST",
       "sortNum": 20000,
@@ -552,14 +616,80 @@
       ],
       "body": {
         "type": "json",
-        "raw": "{\n  \"interaction_type\": \"ocr_analysis\",\n  \"prompt\": \"Analyze this report\",\n  \"response\": \"Patient is healthy\"\n}"
+        "raw": "{\n  \"context\": \"GENERAL_CHAT\",\n  \"prompt\": \"What is my glucose level?\",\n  \"response\": \"Your last recorded glucose was 95 mg/dL.\",\n  \"tokens_used\": 120\n}"
       }
     },
     {
-      "_id": "002d154a-005f-4a2a-883d-7913f477b412",
-      "colId": "c59d9be2-9317-4467-9896-af1907ccbc37",
-      "containerId": "56c4f100-f8a1-40ce-bac5-75e86d0934ca",
-      "name": "Get API Logs",
+      "_id": "ab3ec72f-0e56-485d-baac-c5044fa2bf48",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "1bee194f-ca3b-46da-8f4c-5e51b6cba4aa",
+      "name": "Delete AI Log",
+      "url": "http://127.0.0.1:8000/api/ai-logs/logs/1/",
+      "method": "DELETE",
+      "sortNum": 30000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {}
+    },
+    {
+      "_id": "0b2c61b1-8a0f-4327-8f73-3eb25b6823d4",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "04cfe79a-0827-42ab-ba90-20cf7052845d",
+      "name": "Analyse Medicine (by Name)",
+      "url": "http://127.0.0.1:8000/api/medicine/text/",
+      "method": "POST",
+      "sortNum": 10000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"medicine_name\": \"Ibuprofen\"\n}"
+      }
+    },
+    {
+      "_id": "a5e5ebf1-f10c-45f1-a3fa-dbd902417986",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "04cfe79a-0827-42ab-ba90-20cf7052845d",
+      "name": "Analyse Medicine (by Image)",
+      "url": "http://127.0.0.1:8000/api/medicine/image/",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2026-05-15T00:00:00.000Z",
+      "modified": "2026-05-15T00:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <paste-token-here>"
+        }
+      ],
+      "body": {
+        "type": "formdata",
+        "form": [
+          {
+            "name": "file",
+            "value": "",
+            "type": "file"
+          }
+        ]
+      }
+    },
+    {
+      "_id": "ea384ed2-984c-47ee-ad58-5ca1d87d6366",
+      "colId": "2c43c6d3-a1e1-47bb-abc6-0e2232bcf6ed",
+      "containerId": "fb49cfd3-7151-4557-a514-37570f2a36ce",
+      "name": "List API Audit Logs",
       "url": "http://127.0.0.1:8000/api/integrations/logs/",
       "method": "GET",
       "sortNum": 10000,
