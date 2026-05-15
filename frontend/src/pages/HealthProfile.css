@@ -1,0 +1,86 @@
+.health-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-3);
+}
+
+.health-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.health-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.health-value {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.health-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.health-bmi {
+  margin-top: var(--space-4);
+}
+
+.health-section {
+  margin-bottom: var(--space-4);
+}
+
+.health-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.health-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.health-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.health-skeleton-title {
+  width: 210px;
+}
+
+.health-skeleton-subtitle {
+  width: 260px;
+}
+
+.health-skeleton-heading {
+  width: 160px;
+}
+
+.health-skeleton-button {
+  width: 120px;
+  height: 32px;
+}
+
+@media (max-width: 900px) {
+  .health-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
